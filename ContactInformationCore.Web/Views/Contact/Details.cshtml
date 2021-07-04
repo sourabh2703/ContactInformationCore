@@ -1,0 +1,52 @@
+﻿@model ContactInformationCore.Model.ContactInformation
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Contact Details</div>
+        <div class="panel-body">
+            <div class="row">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.First_Name)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.First_Name)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Last_Name)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Last_Name)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Phone_Number)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Phone_Number)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Status)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id}, new { @class = "btn btn-default" }) |
+            <a asp-action="Index" class="btn btn-default">Back to List</a>
+        </div>
+    </div>
+</div>
